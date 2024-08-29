@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getData(){
             const di = localStorage.getItem('tasks');
-            const li = JSON.parse(di);
+            const li = JSON.parse(di) || [];
             console.log(li);
         }
         getData();
