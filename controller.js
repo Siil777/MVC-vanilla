@@ -2,12 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const model = new taskModel();
         const view = new viewModel();
 
-
-        view.renderTasks(model.getTasks());
+        view.renderTasks(model.tasks);
         model.addListener(tasks=> view.renderTasks(tasks));
         view.bindAddTask(task => model.addTask(task));
         //all
-        view.renderAllTasks(model.getTasks());
+        view.renderAllTasks(model.tasks);
         model.addListener(tasks=>view.renderAllTasks(tasks));
 
 
