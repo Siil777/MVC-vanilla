@@ -1,6 +1,6 @@
 class taskModel {
     constructor(){
-        this.tasks = JSON.parse(localStorage.getItem('tasks'));
+        this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         this.listeners = [];
     }
     addTask(task) {
