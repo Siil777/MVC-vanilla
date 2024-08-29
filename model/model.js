@@ -18,6 +18,6 @@ class taskModel {
         this.listeners.push(listener);
     }
     notify(){
-        this.listeners.forEach(listener=>listener(this.listeners));
+        this.listeners.forEach(listener=>listener(this.tasks));
     }
 }
