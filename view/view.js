@@ -15,6 +15,10 @@ class viewModel {
         this.taskInput.value = '';
     }
     renderTasks(tasks){
+        if(!tasks){
+            console.log('task is null or undefined');
+            return;
+        }
         this.taskList.textContent = '';
         const li = document.createElement('li');
         tasks.forEach(task => {
